@@ -11,6 +11,7 @@ Start-Sleep 3
 pip install raylib
 pip install rich
 code --extensions-dir "%ProgramFiles%\Microsoft VS Code\resources\app\extensions" --install-extension ms-python.python --force
+code --extensions-dir "%ProgramFiles%\Microsoft VS Code\resources\app\extensions" --install-extension paulober.pico-w-go --force
 
 Write-Host "Running installers (See 'instructions.txt')" -ForegroundColor Green
 Start-Sleep 3
