@@ -1,0 +1,16 @@
+<Configuration>
+
+  <Add OfficeClientEdition="64" Channel="Current">
+    <Product ID="O365HomePremRetail">
+      <Language ID="en-us" />
+      <ExcludeApp ID="Publisher" />
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Outlook" /> <!-- Exclude until new Outlook application is included by default -->
+    </Product>
+  </Add>
+
+  <Updates Enabled="TRUE" Channel="Current" />
+
+  <Property Name="AUTOACTIVATE" Value="1" />
+
+</Configuration>
