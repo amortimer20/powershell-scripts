@@ -2,8 +2,6 @@
 Start-Sleep 3
 winget install Python.Python.3.12 --scope machine
 winget install Microsoft.VisualStudioCode --scope machine
-
-# Reload path
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
 Write-Host "Installing Python packages and VS Code extensions" -ForegroundColor Green
@@ -15,6 +13,9 @@ code --extensions-dir "%ProgramFiles%\Microsoft VS Code\resources\app\extensions
 
 Write-Host "Running installers (See 'instructions.txt')" -ForegroundColor Green
 Start-Sleep 3
-Set-Location $PSScriptRoot
-.\VisualStudioSetup.exe
-.\UnityHubSetup.exe
+
+foreach ($installer in Get-ChildItem "$PSScriptRoot\installers" -File) {
+    if ($installer.Name -ne ".keep") {
+        Start-Process $installer -Wait
+    }
+}
