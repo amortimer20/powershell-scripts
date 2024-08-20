@@ -1,10 +1,7 @@
 ### Computer Science Software Installation 2024 ###
 
-1) Open 'Windows PowerShell ISE' as Administrator. The script below will not execute without administrator privileges.
-2) Open script 'comp-sci-installer.ps1'
-3) Click run button. This will run install commands from the terminal and run executables located in this directory.
-4) For Visual Studio Installer, select the following workloads:
+1) For Unity Hub Installer, leave default options.
+2) For Visual Studio Installer, select the following workloads:
 	- Python Development
 	- .NET Desktop Development
 	- Game Development with Unity (Uncheck Unity Hub under Installation Details)
-5) For Unity Hub Installer, leave default options.
